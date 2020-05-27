@@ -1,0 +1,8 @@
+{
+  "name": "SSBMobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "cebb878e"
+}
