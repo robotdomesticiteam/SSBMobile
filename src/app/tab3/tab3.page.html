@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="cube-outline"></ion-icon> Dispositivi
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list padding>
+    <ion-button expand="block"
+                (click)="startScanning()">scanziona dispositivi</ion-button>
+    <ion-list-header>
+        Dispositivi accoppiati
+    </ion-list-header>
+    <ion-item *ngFor="let device of pairedDevices">
+      <span (click)="selectedItem(device.id)">
+        {{device.name || device.address}}
+    </span>
+    </ion-item>
+    <ion-button expand="block"
+                (click)="disconnect()">disconnetti dispositivo</ion-button>
+    <ion-list-header>
+        Dispositivi disponibili
+    </ion-list-header>
+    <ion-item *ngFor='let device of unpairedDevices'>
+        <span (click)="selectDevice(device.id)">
+            {{device.name || device.address}}
+        </span>
+    </ion-item>
+    <ion-spinner name="crescent"
+                 *ngIf="gettingDevices"></ion-spinner>
+    </ion-list>  
+  
+
+</ion-content>

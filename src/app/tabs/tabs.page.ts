@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from "@angular/core";
+import {envVariables} from '../../environments/environment';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  public appBuild: string;
+  public appVersion: string;
+  public username: string;
+  
+  
+  constructor(private ngZone: NgZone) {
+    this.appVersion = envVariables.VERSION;
+    this.appBuild = envVariables.BUILD;  
+    this.username = envVariables.USERNAME;    
+  }
+
+
+  
 
 }

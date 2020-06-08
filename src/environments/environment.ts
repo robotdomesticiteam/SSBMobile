@@ -2,6 +2,20 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+export const envVariables = {
+  
+  INSTANCE_URL: 'http://46.44.208.34:50400/API',
+  DEVICE_NAME : "NO_DEVICE",
+  DEVICE_ID : "",
+  UID: "",
+  VERSION: "0.1",
+  BUILD: "10",
+  USERNAME: "Test",
+  SECONDS_FASE_1 : "000",
+  SECONDS_FASE_2 : "000",
+  TARGA: ""
+};
+
 export const environment = {
   production: false
 };
