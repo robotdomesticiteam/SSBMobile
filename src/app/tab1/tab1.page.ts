@@ -4,6 +4,7 @@ import { AlertController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import {envVariables} from '../../environments/environment';
 import { NgZone  } from '@angular/core';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -23,6 +24,7 @@ export class Tab1Page {
   constructor(private bluetoothSerial: BluetoothSerial,
               private storage: Storage, 
               private alertController: AlertController,
+              private tts: TextToSpeech,
               private zone: NgZone) {
 
       
@@ -154,8 +156,14 @@ export class Tab1Page {
               // ESEGUI SANIFICAZIONE
               this.bt_command = "GO,"+ envVariables.SECONDS_FASE_1 +"," + envVariables.SECONDS_FASE_2 + "\x0a";
               this.bluetoothSerial.write(this.bt_command).then(this.success_BT, this.failure_BT);
-              
-            }
+
+              this.tts.speak({
+                text: "Sanificazione avviata! Allontanarsi dal raggio di azione del dispositivo.",
+                locale: 'it-IT',
+                rate: 1.00
+            })
+            .then(() => console.log('Success'))
+            .catch((reason: any) => console.log(reason));            }
           }
         ]
       });

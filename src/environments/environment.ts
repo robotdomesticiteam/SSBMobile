@@ -9,7 +9,7 @@ export const envVariables = {
   DEVICE_ID : "",
   UID: "",
   VERSION: "0.1",
-  BUILD: "10",
+  BUILD: "12",
   USERNAME: "Test",
   SECONDS_FASE_1 : "000",
   SECONDS_FASE_2 : "000",
