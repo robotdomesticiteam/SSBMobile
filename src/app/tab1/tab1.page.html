@@ -15,6 +15,11 @@
       <ion-icon name="ribbon-outline"></ion-icon>ESEGUI SANIFICAZIONE
     </ion-button>
   </form>
+
+  <div class="flex progress" style="height: 60%;">
+    <circle-progress [percent]="progress" [subtitleFontSize]="8" [radius]="50" [showSubtitle]="true" [subtitle]="progressText"></circle-progress>
+  </div>
+
   <ion-button expand="block" size="large" color="danger" (click)="arresta()">
     <ion-icon name="warning-outline"></ion-icon>ARRESTA SANIFICAZIONE
   </ion-button>

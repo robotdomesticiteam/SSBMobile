@@ -5,7 +5,6 @@ import { Storage } from '@ionic/storage';
 import {envVariables} from '../../environments/environment';
 import { NgZone  } from '@angular/core';
 
-
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -145,4 +144,7 @@ export class Tab3Page {
     await alert.present();
   }  
 
+
+
+  
 }

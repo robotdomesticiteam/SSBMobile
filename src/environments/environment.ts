@@ -4,12 +4,16 @@
 
 export const envVariables = {
   
-  INSTANCE_URL: 'http://46.44.208.34:50400/API',
+  INSTANCE_URL: 'http://san.parts-services.it/Macchinari/',
+  CLEANING_START : 'CleaningStart',
+  CLEANING_COMPLETED : 'CleaningCompleted',
+  DISINFECTION_START : 'DisinfectionStart',
+  DISINFECTION_COMPLETED : 'DisinfectionCompleted',
   DEVICE_NAME : "NO_DEVICE",
   DEVICE_ID : "",
   UID: "",
   VERSION: "0.1",
-  BUILD: "12",
+  BUILD: "18",
   USERNAME: "Test",
   SECONDS_FASE_1 : "000",
   SECONDS_FASE_2 : "000",
